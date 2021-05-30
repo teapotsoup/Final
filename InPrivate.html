@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>InPrivate</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script type="text/javascript" src="sumValue.js"></script>
+  <script type="text/javascript" src="whatTimeIsIt.js"></script>
+  <style>
+      .mySlides {
+      display: none
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    
+    @media only screen and (max-width: 300px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px
+      }
+    }
+    .dropdown-toggle::after {
+      color: #4B2920;
+    }
+
+    .material-icons.md-18 {
+      font-size: 18px;
+    }
+
+    .material-icons.md-24 {
+      font-size: 24px;
+    }
+
+    .material-icons.md-36 {
+      font-size: 36px;
+    }
+
+    .material-icons.md-48 {
+      font-size: 48px;
+    }
+
+    .material-icons.md-100 {
+      font-size: 100px;
+    }
+  </style>
+
+</head>
+
+<body >
+  <div id="전체 컨테이너" class="container-fluid" style="background-color: #DEE2E6; ">
+    <div id="행" class="row flex-nowrap">
+      <div id="사이드네비게이션" class="col-auto" style="background-color: #EDEEEE; position: fixed; padding: 10px;">
+        <div class="d-flex flex-column align-items-sm-start  min-vh-100">
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-sm-start" id="menu">
+            <span id="대제목" class="ms-1 d-sm-inline"
+              style="color: #4B2920; font-family: 'Noto Sans KR', sans-serif; font-weight : 800;">
+              <h3>LifePortPolio</h3>
+            </span>
+            <a id="홈링크" href="./cover.html" style="text-decoration:none"><span class="ms-1 d-sm-inline"
+                style="font-family: 'Noto Sans KR', sans-serif; font-weight : 600; color: #4B2920;">
+                <h5>Home</h5>
+              </span></a>
+            </li>
+            <li id="드롭박스 리스트1" class="nav-item">
+              <a class="nav-link collapsed dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#menu_item1"
+                href="#" aria-expanded="false">
+                <span class="ms-1 d-sm-inline"
+                  style="font-family: 'Noto Sans KR', sans-serif; font-weight : 500; color: #4B2920;">
+                  InJob / <span style="font-weight : 800;">InPrivate</span></span>
+              </a>
+              <ul id="menu_item1" class="submenu collapse" data-bs-parent="#nav_accordion">
+                <li style="list-style:none;"><a class="nav-link" href="./InJob.html"><span class="d-sm-inline"
+                      style="font-weight : 500; color: #4B2920">InJob</span></a></li>
+                <li style="list-style:none;"><a class="nav-link" href="./InPrivate.html"> <span class="d-sm-inline"
+                      style="font-weight : 800; color: #4B2920">InPrivate</span></a></li>
+              </ul>
+            </li>
+            <li id="드롭박스 리스트2" class="nav-item">
+              <a class="nav-link collapsed dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#menu_item2"
+                href="#" aria-expanded="false">
+                <span class="ms-1 d-sm-inline"
+                  style="font-family: 'Noto Sans KR', sans-serif; font-weight : 500; color: #4B2920;">Instagram /
+                  Blog</span></a>
+              <ul id="menu_item2" class="submenu collapse" data-bs-parent="#nav_accordion">
+                <li style="list-style:none;"><a class="nav-link" href="https://www.naver.com/"><span class="d-sm-inline"
+                      style="font-weight : 500; color: #4B2920">Instagram</span></a></li>
+                <li style="list-style:none;"><a class="nav-link"
+                    href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0"> <span
+                      class="d-sm-inline" style="font-weight : 500; color: #4B2920">Blog</span></a></li>
+              </ul>
+            </li>
+            <li id="드롭박스 리스트3" class="nav-item">
+              <a class="nav-link collapsed dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#menu_item3"
+                href="#" aria-expanded="false">
+                <span class="ms-1 d-sm-inline"
+                  style="font-family: 'Noto Sans KR', sans-serif; font-weight : 500; color: #4B2920;">GitHub /
+                  Etc</span></a>
+              <ul id="menu_item3" class="submenu collapse" data-bs-parent="#nav_accordion">
+                <li style="list-style:none;"><a class="nav-link"
+                    href="https://app.circleci.com/projects/project-dashboard/github/teapotsoup/"><span
+                      class="d-sm-inline" style="font-weight : 500; color: #4B2920">GitHub</span></a></li>
+              </ul>
+            </li>
+          </ul>
+          <hr>
+          <div id="유저컴포넌트" class="dropdown d-flex navbar-brand">
+            <a href="#" class="align-items-center text-decoration-none dropdown-toggle" id="dropdownUser1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="./image/profile.png" width="30" height="30" class="rounded-circle">
+              <span
+                style="color: #4B2920; font-family: 'Noto Sans KR', sans-serif; font-weight : 500;">SeoJeongWoo</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="background-color: #4B2920;">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+          <div style="margin-top: 20px;"></div>
+        </div>
+      </div>
+      <div id="메인내용물" class="col" style="margin-left: 220px;">
+        <div id="게시글칸" class="container my-3">
+          <div class="row">
+            <h1 style="text-align: center; margin-top: 20px; margin-bottom: 30px; font-family: 'Noto Sans KR', sans-serif; font-weight : 700; color : #333333;">Shelter</h1>
+            <div class="col-md-8 col-lg-9">
+              <!-- Blog Post -->
+              <div id="게시글 1" class="card mb-4 p-4">
+                <div style="text-align: center;">
+                  <h2 style="font-family: 'Noto Sans KR', sans-serif; font-weight : 400; color : #333333;">취미소개</h2>
+                  <h6>"맛집탐방"</h6>
+                </div>
+                <div class="slideshow-container">
+                    <div class="mySlides">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="image/godeat.jpg" style="width:100%">
+                      <div class="text" style="color: #ffffff; font-family: 'Noto Sans KR', sans-serif; font-weight : 500;">압구정로데오 갓잇</div>
+                    </div>
+                
+                    <div class="mySlides">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="image/donut.jpg" style="width:100%">
+                      <div class="text" style="color: #ffffff; font-family: 'Noto Sans KR', sans-serif; font-weight : 500;">강남 노티드 도넛</div>
+                    </div>
+                
+                    <div class="mySlides">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="image/ramen.jpg" style="width:100%">
+                      <div class="text" style="color: #ffffff; font-family: 'Noto Sans KR', sans-serif; font-weight : 500;">홍대 멘야준</div>
+
+                    </div>
+                
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                  </div>
+                  <br>
+                
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
+                
+                  <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+                
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                
+                    function showSlides(n) {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+                      var dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) { slideIndex = 1 }
+                      if (n < 1) { slideIndex = slides.length }
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex - 1].style.display = "block";
+                      dots[slideIndex - 1].className += " active";
+                    }
+                  </script>
+                <div style="text-align: center;">
+                  <hr>
+                  <p>서울 근방으로 다양한 맛집을 찾아 다니는 것이 저의 취미입니다.</p>
+                </div>
+              </div>
+              <div id="게시글 2" class="card mb-4 p-4">
+                <div style="text-align: center;">
+                  <h2 style="font-family: 'Noto Sans KR', sans-serif; font-weight : 400; color : #333333;">관심사 소개</h2>
+                  <h6>"좋은 레이아웃 사이트 찾아보기"</h6>
+                </div>
+                <div class="container py-4">
+                  <ul class="row list-unstyled">
+                      <li class="col-lg-6 mb-3">
+                        <a href="portfolio-3.html">
+                            <figure>
+                                <div class="img-overlay mb-3">
+                                    <img src="image/Animation5.gif" alt="Photography" class="img-thumbnail">
+                                </div>
+                                <figcaption class="h5 font-weight-normal text-center"><a href="https://visla.kr/"target="_blank" >VislaMagazine</a></figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                      <li class="col-lg-6 mb-3">
+                          <a href="portfolio-2.html">
+                              <figure>
+                                  <div class="img-overlay mb-3">
+                                      <img src="image/Animation4.gif" alt="Interior Design" class="img-thumbnail">
+                                  </div>
+                                  <figcaption class="h5 font-weight-normal text-center"><a href="https://tres-bien.com/"target="_blank" >Très-bien</a></figcaption>
+                              </figure>
+                          </a>
+                      </li>
+      
+                      <li role="cavempt" class="col-lg-6 mb-3" >
+                        <a href="portfolio-1.html">
+                            <figure>
+                                <div class="img-overlay mb-3">
+                                    <img src="image/Animation7.gif" alt="Architecture" class="img-thumbnail" height="200px">
+                                </div>
+                                <figcaption class="h5 font-weight-normal text-center"><a href="https://www.cavempt.com/"target="_blank" >Cavempt</a></figcaption>
+                            </figure>
+                        </a>
+                    </li>
+      
+                      <li class="col-lg-6 mb-3">
+                          <a href="portfolio-4.html">
+                              <figure>
+                                  <div class="img-overlay mb-3">
+                                      <img src="image/Animation6.gif" alt="Web Design" class="img-thumbnail">
+                                  </div>
+                                  <figcaption class="h5 font-weight-normal text-center"><a href="https://www.acnestudios.com/kr/ko/home?gclid=Cj0KCQjwna2FBhDPARIsACAEc_WYneXYiqkYAvrMKqIl5Z3CLqeuDrGUgIUTGZwtIlpsPEBS8T3y8iEaArVXEALw_wcB"target="_blank" >AcneStudios</a></figcaption>
+                              </figure>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+                <div style="text-align: center;">
+                  <hr>
+                  <p>웹서핑을 하면서 괜찮은 레이아웃이나 독특한 디자인의 사이트들을 찾는 것이 주된 관심사입니다.</p>
+                </div>
+              </div>
+              <div id="게시글 3" class="card mb-4 p-4">
+                <div style="text-align: center;">
+                  <h2 style="font-family: 'Noto Sans KR', sans-serif; font-weight : 400; color : #333333;">향후 하고싶은 것</h2>
+                  <h6>"영상 촬영 및 편집"</h6>
+                </div>
+                <div class="site-preview-choices">
+                  <div class="container py-4">
+                    <div class="row">
+                      <div class="col-md-11 col-lg-12 mx-auto">
+                        <div class="row">
+                          <div class="col-lg-6 col-xl-6" style="text-align: center;">
+                            <article class="card mb-4">
+                              <header class="card-header">
+                                  <h4 class="card-title">Casey neistat</h4>
+                              </header>
+                                <img class="card-img card-img-border" src="image/Casey.png">
+                              <div class="card-body">
+                                <p class="card-text">수많은 카피캣들을 양산한 Casey Neistat의 독창성이 보이는 영상</p>
+                                <a href="https://www.youtube.com/watch?v=jG7dSXcfVqE&ab_channel=CaseyNeistatCaseyNeistat"target="_blank" >DO WHAT YOU CAN'T</a>
+                              </div>
+                            </article>
+                          </div>
+                          <div class="col-lg-6 col-xl-6" style="text-align: center;">
+                            <article class="card mb-4">
+                              <header class="card-header">
+                                  <h4 class="card-title">느린 양반</h4>
+                              </header>
+                                <img class="card-img card-img-border" src="image/slowboy.PNG">
+                              <div class="card-body">
+                                <p class="card-text">부드럽고 따뜻한 색감의 영상을 보여주는 의류 유튜버</p>
+                                <a href="https://www.youtube.com/watch?v=zOtyLtMFz90&ab_channel=SlowBoy-%EB%8A%90%EB%A6%B0%EC%96%91%EB%B0%98SlowBoy-%EB%8A%90%EB%A6%B0%EC%96%91%EB%B0%98"target="_blank" >바지핏에 대해 아무도 알려주지 않는 사실 하나</a>
+                              </div>
+                            </article>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="text-align: center;">
+                  <hr>
+                  <p>시간이 없어 배우진 못하지만 상단의 영상들 같이 양질의 영상들을 찾아보고 촬영 구도를 중점으로 시청중입니다.</p>
+                </div>
+              </div>
+              <div id="게시글 4" class="card mb-4 p-4">
+                <div style="text-align: center;">
+                  <h2 style="font-family: 'Noto Sans KR', sans-serif; font-weight : 400; color : #333333;">직무와의 융합</h2>
+                  <h6>"의류 브랜드의 홈페이지 디자인 & 제작"</h6>
+                </div>
+                <div class="container">
+                  <img src="https://res.cloudinary.com/haven/image/upload/$wpsize_!_cld_full!,w_2048,h_1366,c_scale/v1585779513/havenshop.com/Toronto-02.jpg" style="width:100%; height:100%;"/>
+                </div>
+                <div style="text-align: center;">
+                  <hr>
+                  <p>의류를 좋아해서 의류 산업쪽에서 종사하고 싶은데, 제 전공을 살려서 웹을 디자인하고 개발해 의류 브랜드의 브랜딩을 돕는 프론트 엔드 개발자가 되고싶습니다.</p>
+                </div>
+              </div>
+              <!-- Blog Post -->
+            </div>
+            <div role="고정 프로필" class="col-md-4 col-lg-3">
+              <div class="position-sticky" style="top: 2rem; " >
+                <!-- Search Widget -->
+              <div id="side-profile" style="text-align: center;">
+                <img class="rounded-circle mb-3" src="./image/profile.png" style="width:120px; height:120px;"/>
+                <p>가진건 적지만 하고 싶은 건 많습니다.</p>
+                <h4 class="mb-3">서정우</h4>
+                
+              </div>
+              <div class="p-4 mb-3 rounded" style="border: black; background-color: #F8F1E8; text-align: center;"> 
+                <h5>Search</h5>
+                <div >
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for..."> <span
+                      class="input-group-append">
+                      <button class="btn btn-secondary" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+                <div class="container text mb-3"> 
+            </div>
+              </div>
+                <div class="p-4 mb-3 rounded" style="background-color: #F8F1E8; text-align: left;">
+                  <h4 style="font-family: 'Noto Sans KR', sans-serif; font-weight : 600;">Index</h4>
+                  <div class="mb-1 rounded text-muted ">● 취미 소개</div>
+                  <div class="mb-1 text-muted">● 관심사 소개</div>
+                  <div class="mb-1 text-muted">● 향후 하고 싶은 것들</div>
+                  <div class="mb-1 text-muted">● 직무와의 융합</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+            <ul role="페이지네이션" class="pagination justify-content-center mb-4">
+              <li class="page-item disabled"><a class="page-link" href="#">previous</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">next</a></li>
+            </ul>	
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

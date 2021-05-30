@@ -1,0 +1,14 @@
+
+#icon1:hover {
+    transform: rotate(45deg);
+    width: 95px;
+    height: 95px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #icon2:hover {
+    transform: rotate(45deg);
+    width: 95px;
+    height: 95px;
+    transition: all 0.3s ease-in-out;
+  }
